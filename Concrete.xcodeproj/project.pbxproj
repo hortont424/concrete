@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35007C10136906D8008ACFBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35007C0F136906D8008ACFBE /* Cocoa.framework */; };
+		35007C22136906D8008ACFBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35007C0F136906D8008ACFBE /* Cocoa.framework */; };
+		35007C25136906D8008ACFBE /* Concrete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35007C0C136906D8008ACFBE /* Concrete.framework */; };
+		35007C2E136906D8008ACFBE /* ConcreteTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 35007C2D136906D8008ACFBE /* ConcreteTests.h */; };
+		35007C30136906D8008ACFBE /* ConcreteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C2F136906D8008ACFBE /* ConcreteTests.m */; };
+		35007C3C1369070E008ACFBE /* NSArray+Concrete.h in Headers */ = {isa = PBXBuildFile; fileRef = 35007C3A1369070E008ACFBE /* NSArray+Concrete.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35007C3D1369070E008ACFBE /* NSArray+Concrete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C3B1369070E008ACFBE /* NSArray+Concrete.m */; };
+		35007C4013690F6B008ACFBE /* NSSet+Concrete.h in Headers */ = {isa = PBXBuildFile; fileRef = 35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */; };
+		35007C4113690F6B008ACFBE /* NSSet+Concrete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C3F13690F6B008ACFBE /* NSSet+Concrete.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35007C23136906D8008ACFBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35007C02136906D8008ACFBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35007C0B136906D8008ACFBE;
+			remoteInfo = Concrete;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35007C0C136906D8008ACFBE /* Concrete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Concrete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35007C0F136906D8008ACFBE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		35007C12136906D8008ACFBE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		35007C13136906D8008ACFBE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		35007C14136906D8008ACFBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		35007C17136906D8008ACFBE /* Concrete-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Concrete-Info.plist"; sourceTree = "<group>"; };
+		35007C1B136906D8008ACFBE /* Concrete-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Concrete-Prefix.pch"; sourceTree = "<group>"; };
+		35007C21136906D8008ACFBE /* ConcreteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcreteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35007C28136906D8008ACFBE /* ConcreteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConcreteTests-Info.plist"; sourceTree = "<group>"; };
+		35007C2C136906D8008ACFBE /* ConcreteTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConcreteTests-Prefix.pch"; sourceTree = "<group>"; };
+		35007C2D136906D8008ACFBE /* ConcreteTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConcreteTests.h; sourceTree = "<group>"; };
+		35007C2F136906D8008ACFBE /* ConcreteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcreteTests.m; sourceTree = "<group>"; };
+		35007C3A1369070E008ACFBE /* NSArray+Concrete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Concrete.h"; sourceTree = "<group>"; };
+		35007C3B1369070E008ACFBE /* NSArray+Concrete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Concrete.m"; sourceTree = "<group>"; };
+		35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Concrete.h"; sourceTree = "<group>"; };
+		35007C3F13690F6B008ACFBE /* NSSet+Concrete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Concrete.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35007C08136906D8008ACFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35007C10136906D8008ACFBE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35007C1D136906D8008ACFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35007C22136906D8008ACFBE /* Cocoa.framework in Frameworks */,
+				35007C25136906D8008ACFBE /* Concrete.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35007C00136906D8008ACFBE = {
+			isa = PBXGroup;
+			children = (
+				35007C15136906D8008ACFBE /* Concrete */,
+				35007C26136906D8008ACFBE /* ConcreteTests */,
+				35007C0E136906D8008ACFBE /* Frameworks */,
+				35007C0D136906D8008ACFBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35007C0D136906D8008ACFBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35007C0C136906D8008ACFBE /* Concrete.framework */,
+				35007C21136906D8008ACFBE /* ConcreteTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35007C0E136906D8008ACFBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35007C0F136906D8008ACFBE /* Cocoa.framework */,
+				35007C11136906D8008ACFBE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35007C11136906D8008ACFBE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35007C12136906D8008ACFBE /* AppKit.framework */,
+				35007C13136906D8008ACFBE /* CoreData.framework */,
+				35007C14136906D8008ACFBE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		35007C15136906D8008ACFBE /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				35007C39136906F9008ACFBE /* Categories */,
+				35007C16136906D8008ACFBE /* Supporting Files */,
+			);
+			path = Concrete;
+			sourceTree = "<group>";
+		};
+		35007C16136906D8008ACFBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35007C17136906D8008ACFBE /* Concrete-Info.plist */,
+				35007C1B136906D8008ACFBE /* Concrete-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35007C26136906D8008ACFBE /* ConcreteTests */ = {
+			isa = PBXGroup;
+			children = (
+				35007C2D136906D8008ACFBE /* ConcreteTests.h */,
+				35007C2F136906D8008ACFBE /* ConcreteTests.m */,
+				35007C27136906D8008ACFBE /* Supporting Files */,
+			);
+			path = ConcreteTests;
+			sourceTree = "<group>";
+		};
+		35007C27136906D8008ACFBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35007C28136906D8008ACFBE /* ConcreteTests-Info.plist */,
+				35007C2C136906D8008ACFBE /* ConcreteTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35007C39136906F9008ACFBE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				35007C3A1369070E008ACFBE /* NSArray+Concrete.h */,
+				35007C3B1369070E008ACFBE /* NSArray+Concrete.m */,
+				35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */,
+				35007C3F13690F6B008ACFBE /* NSSet+Concrete.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		35007C09136906D8008ACFBE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35007C3C1369070E008ACFBE /* NSArray+Concrete.h in Headers */,
+				35007C4013690F6B008ACFBE /* NSSet+Concrete.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		35492F351369178F0058E81A /* ConcreteDocs */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = .;
+			buildConfigurationList = 35492F361369178F0058E81A /* Build configuration list for PBXLegacyTarget "ConcreteDocs" */;
+			buildPhases = (
+			);
+			buildToolPath = appledoc;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = ConcreteDocs;
+			passBuildSettingsInEnvironment = 1;
+			productName = ConcreteDocs;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		35007C0B136906D8008ACFBE /* Concrete */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35007C33136906D8008ACFBE /* Build configuration list for PBXNativeTarget "Concrete" */;
+			buildPhases = (
+				35007C07136906D8008ACFBE /* Sources */,
+				35007C08136906D8008ACFBE /* Frameworks */,
+				35007C09136906D8008ACFBE /* Headers */,
+				35007C0A136906D8008ACFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Concrete;
+			productName = Concrete;
+			productReference = 35007C0C136906D8008ACFBE /* Concrete.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		35007C20136906D8008ACFBE /* ConcreteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35007C36136906D8008ACFBE /* Build configuration list for PBXNativeTarget "ConcreteTests" */;
+			buildPhases = (
+				35007C1C136906D8008ACFBE /* Sources */,
+				35007C1D136906D8008ACFBE /* Frameworks */,
+				35007C1E136906D8008ACFBE /* Resources */,
+				35007C1F136906D8008ACFBE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35007C24136906D8008ACFBE /* PBXTargetDependency */,
+			);
+			name = ConcreteTests;
+			productName = ConcreteTests;
+			productReference = 35007C21136906D8008ACFBE /* ConcreteTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35007C02136906D8008ACFBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Rensselaer Polytechnic Institute";
+			};
+			buildConfigurationList = 35007C05136906D8008ACFBE /* Build configuration list for PBXProject "Concrete" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 35007C00136906D8008ACFBE;
+			productRefGroup = 35007C0D136906D8008ACFBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35007C0B136906D8008ACFBE /* Concrete */,
+				35007C20136906D8008ACFBE /* ConcreteTests */,
+				35492F351369178F0058E81A /* ConcreteDocs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35007C0A136906D8008ACFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35007C1E136906D8008ACFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35007C2E136906D8008ACFBE /* ConcreteTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35007C1F136906D8008ACFBE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35007C07136906D8008ACFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35007C3D1369070E008ACFBE /* NSArray+Concrete.m in Sources */,
+				35007C4113690F6B008ACFBE /* NSSet+Concrete.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35007C1C136906D8008ACFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35007C30136906D8008ACFBE /* ConcreteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35007C24136906D8008ACFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35007C0B136906D8008ACFBE /* Concrete */;
+			targetProxy = 35007C23136906D8008ACFBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		35007C31136906D8008ACFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		35007C32136906D8008ACFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		35007C34136906D8008ACFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Concrete/Concrete-Prefix.pch";
+				INFOPLIST_FILE = "Concrete/Concrete-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		35007C35136906D8008ACFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Concrete/Concrete-Prefix.pch";
+				INFOPLIST_FILE = "Concrete/Concrete-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		35007C37136906D8008ACFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConcreteTests/ConcreteTests-Prefix.pch";
+				INFOPLIST_FILE = "ConcreteTests/ConcreteTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		35007C38136906D8008ACFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConcreteTests/ConcreteTests-Prefix.pch";
+				INFOPLIST_FILE = "ConcreteTests/ConcreteTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		35492F371369178F0058E81A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		35492F381369178F0058E81A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35007C05136906D8008ACFBE /* Build configuration list for PBXProject "Concrete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35007C31136906D8008ACFBE /* Debug */,
+				35007C32136906D8008ACFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35007C33136906D8008ACFBE /* Build configuration list for PBXNativeTarget "Concrete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35007C34136906D8008ACFBE /* Debug */,
+				35007C35136906D8008ACFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35007C36136906D8008ACFBE /* Build configuration list for PBXNativeTarget "ConcreteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35007C37136906D8008ACFBE /* Debug */,
+				35007C38136906D8008ACFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35492F361369178F0058E81A /* Build configuration list for PBXLegacyTarget "ConcreteDocs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35492F371369178F0058E81A /* Debug */,
+				35492F381369178F0058E81A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35007C02136906D8008ACFBE /* Project object */;
+}
