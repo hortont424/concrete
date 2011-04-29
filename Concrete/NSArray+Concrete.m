@@ -31,6 +31,18 @@
     return [result autorelease];
 }
 
+/**
+ * Executes a block for every element in the array,
+ * returning a list of the results. In addition to
+ * the element, the block is provided with the index
+ * of that element in the array.
+ *
+ * If block is nil, returns a list of NSNull.
+ *
+ * @param block The block to execute for each element in the array.
+ *
+ * @return An array of the results of each application.
+ */
 - (NSArray *)mapIndexed:(id(^)(NSUInteger, id))block
 {
     NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
