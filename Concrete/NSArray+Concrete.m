@@ -12,22 +12,22 @@
  *
  * @return An array of the results of each application.
  */
-- (NSArray *)map:(id(^)(id))block;
+- (NSArray *)map:(id(^)(id))block
 {
     NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
-
+    
     for(id obj in self)
     {
-        if(block == nil)
+        id value = nil;
+        
+        if(block != nil)
         {
-            [result addObject:[NSNull null]];
+            value = block(obj);
         }
-        else
-        {
-            [result addObject:block(obj)];
-        }
+        
+        [result addObject:value ? block(obj) : [NSNull null]];
     }
-
+    
     return [result autorelease];
 }
 
