@@ -26,6 +26,13 @@
                               }];
     STAssertEqualObjects(expectedNullMapArray, nullMapArray, nil);
     
+    NSArray * expectedMapIndexedArray = [NSArray arrayWithObjects:@"one0", @"two1", @"three2", @"four3", nil];
+    NSArray * mapIndexedArray = [testArray mapIndexed:^(NSUInteger index, id a)
+                          {
+                              return [a stringByAppendingFormat:@"%d",index];
+                          }];
+    STAssertEqualObjects(expectedMapIndexedArray, mapIndexedArray, nil);
+    
     NSArray * expectedFilterArray = [NSArray arrayWithObjects:@"two", @"three", nil];
     NSArray * filterArray = [testArray filter:^(id a)
                              {

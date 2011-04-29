@@ -25,7 +25,29 @@
             value = block(obj);
         }
         
-        [result addObject:value ? block(obj) : [NSNull null]];
+        [result addObject:value ? value : [NSNull null]];
+    }
+    
+    return [result autorelease];
+}
+
+- (NSArray *)mapIndexed:(id(^)(NSUInteger, id))block
+{
+    NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
+    NSUInteger index = 0;
+    
+    for(id obj in self)
+    {
+        id value = nil;
+        
+        if(block != nil)
+        {
+            value = block(index, obj);
+        }
+        
+        [result addObject:value ? value : [NSNull null]];
+        
+        index++;
     }
     
     return [result autorelease];
