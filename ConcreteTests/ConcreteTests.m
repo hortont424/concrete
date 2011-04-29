@@ -19,6 +19,13 @@
                           }];
     STAssertEqualObjects(expectedMapArray, mapArray, nil);
     
+    NSArray * expectedNullMapArray = [NSArray arrayWithObjects:[NSNull null], [NSNull null], [NSNull null], [NSNull null], nil];
+    NSArray * nullMapArray = [testArray map:^(id a)
+                              {
+                                  return (id)nil;
+                              }];
+    STAssertEqualObjects(expectedNullMapArray, nullMapArray, nil);
+    
     NSArray * expectedFilterArray = [NSArray arrayWithObjects:@"two", @"three", nil];
     NSArray * filterArray = [testArray filter:^(id a)
                              {
