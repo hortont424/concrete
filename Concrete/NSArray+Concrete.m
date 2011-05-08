@@ -1,4 +1,5 @@
 #import "NSArray+Concrete.h"
+#import "CRBase.h"
 
 @implementation NSArray (Concrete)
 
@@ -6,24 +7,19 @@
  * Executes a block for every element in the array,
  * returning a list of the results.
  *
- * If block is nil, returns a list of NSNull.
- *
  * @param block The block to execute for each element in the array.
  *
  * @return An array of the results of each application.
  */
 - (NSArray *)map:(id(^)(id))block
 {
+    CR_NIL_BLOCK_CHECK(block);
+    
     NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
     
     for(id obj in self)
     {
-        id value = nil;
-        
-        if(block != nil)
-        {
-            value = block(obj);
-        }
+        id value = block(obj);
         
         [result addObject:value ? value : [NSNull null]];
     }
@@ -37,25 +33,20 @@
  * the element, the block is provided with the index
  * of that element in the array.
  *
- * If block is nil, returns a list of NSNull.
- *
  * @param block The block to execute for each element in the array.
  *
  * @return An array of the results of each application.
  */
 - (NSArray *)mapIndexed:(id(^)(NSUInteger, id))block
 {
+    CR_NIL_BLOCK_CHECK(block);
+    
     NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
     NSUInteger index = 0;
     
     for(id obj in self)
     {
-        id value = nil;
-        
-        if(block != nil)
-        {
-            value = block(index, obj);
-        }
+        id value = block(index, obj);
         
         [result addObject:value ? value : [NSNull null]];
         
@@ -70,8 +61,6 @@
  * returning a list including only those elements
  * for which block returned YES.
  *
- * If block is nil, returns the original array.
- *
  * @param block The block to execute for each element
  * in the array.
  *
@@ -80,10 +69,7 @@
  */
 - (NSArray *)filter:(BOOL(^)(id))block
 {
-    if(block == nil)
-    {
-        return [[self copy] autorelease];
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
 
@@ -102,8 +88,6 @@
  * Executes a block for every element in the array
  * until the block returns YES.
  *
- * If block is nil, returns nil.
- *
  * @param block The block to execute for each element
  * in the array.
  *
@@ -113,10 +97,7 @@
  */
 - (id)selectOne:(BOOL(^)(id))block
 {
-    if(block == nil)
-    {
-        return nil;
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     for(id obj in self)
     {
@@ -136,8 +117,6 @@
  * Each invocation merges two values into one, effectively
  * eventually reducing the list to a single value.
  *
- * If block is nil, returns nil.
- *
  * @param block The block to execute for each element
  * in the array.
  *
@@ -145,10 +124,7 @@
  */
 - (id)reduce:(id(^)(id, id))block
 {
-    if(block == nil)
-    {
-        return nil;
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     id result = block([self objectAtIndex:0], [self objectAtIndex:1]);
 
@@ -164,8 +140,6 @@
  * Executes a block for corresponding pairs of
  * elements in two arrays, returning a list of the results.
  *
- * If block is nil, returns a list of NSNull.
- *
  * If one array is longer than the other, the resultant array
  * will be the length of the shorter array.
  *
@@ -176,6 +150,8 @@
  */
 - (NSArray *)zip:(NSArray *)other with:(id(^)(id, id))block
 {
+    CR_NIL_BLOCK_CHECK(block);
+    
     NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:MIN([self count], [other count])];
 
     NSEnumerator * selfEnumerator = [self objectEnumerator];
@@ -185,14 +161,9 @@
 
     while((obja = [selfEnumerator nextObject]) && (objb = [otherEnumerator nextObject]))
     {
-        if(block == nil)
-        {
-            [result addObject:[NSNull null]];
-        }
-        else
-        {
-            [result addObject:block(obja, objb)];
-        }
+        id value = block(obja, objb);
+        
+        [result addObject:value ? value : [NSNull null]];
     }
 
     return [result autorelease];
@@ -203,8 +174,6 @@
  * partitioning the elements into two arrays depending
  * on the boolean return value of the block.
  *
- * If block is nil, returns an array with empty subarrays.
- *
  * @param block The block to execute for each element in the array.
  *
  * @return An array with two elements: an array containing
@@ -213,10 +182,7 @@
  */
 - (NSArray *)partition:(BOOL(^)(id))block
 {
-    if(block == nil)
-    {
-        return [[NSArray arrayWithObjects:[[NSArray array] autorelease], [[NSArray array] autorelease], nil] autorelease];
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     NSMutableArray * positiveSet = [[NSMutableArray alloc] initWithCapacity:[self count]];
     NSMutableArray * negativeSet = [[NSMutableArray alloc] initWithCapacity:[self count]];

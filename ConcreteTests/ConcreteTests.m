@@ -39,7 +39,6 @@
                                  return [a hasPrefix:@"t"];
                              }];
     STAssertEqualObjects(expectedFilterArray, filterArray, nil);
-    STAssertEqualObjects(testArray, [testArray filter:nil], nil);
     
     NSNumber * selectOneResult = [testNumArray selectOne:^(id a)
                                   {

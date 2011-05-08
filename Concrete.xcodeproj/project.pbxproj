@@ -16,6 +16,7 @@
 		35007C3D1369070E008ACFBE /* NSArray+Concrete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C3B1369070E008ACFBE /* NSArray+Concrete.m */; };
 		35007C4013690F6B008ACFBE /* NSSet+Concrete.h in Headers */ = {isa = PBXBuildFile; fileRef = 35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */; };
 		35007C4113690F6B008ACFBE /* NSSet+Concrete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C3F13690F6B008ACFBE /* NSSet+Concrete.m */; };
+		352EA06413771B0D000D0001 /* CRBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 352EA06213771B0D000D0001 /* CRBase.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		35007C3B1369070E008ACFBE /* NSArray+Concrete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Concrete.m"; sourceTree = "<group>"; };
 		35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Concrete.h"; sourceTree = "<group>"; };
 		35007C3F13690F6B008ACFBE /* NSSet+Concrete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Concrete.m"; sourceTree = "<group>"; };
+		352EA06213771B0D000D0001 /* CRBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		35007C15136906D8008ACFBE /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
+				352EA06013771AEC000D0001 /* Base */,
 				35007C39136906F9008ACFBE /* Categories */,
 				35007C16136906D8008ACFBE /* Supporting Files */,
 			);
@@ -154,6 +157,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		352EA06013771AEC000D0001 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				352EA06213771B0D000D0001 /* CRBase.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -163,6 +174,7 @@
 			files = (
 				35007C3C1369070E008ACFBE /* NSArray+Concrete.h in Headers */,
 				35007C4013690F6B008ACFBE /* NSSet+Concrete.h in Headers */,
+				352EA06413771B0D000D0001 /* CRBase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +501,7 @@
 				35492F381369178F0058E81A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

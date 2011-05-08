@@ -1,4 +1,5 @@
 #import "NSArray+Concrete.h"
+#import "CRBase.h"
 
 @implementation NSSet (Concrete)
 
@@ -6,24 +7,21 @@
  * Executes a block for every element in the set,
  * returning a list of the results.
  *
- * If block is nil, returns a set of NSNull.
- *
  * @param block The block to execute for each element in the set.
  *
  * @return A set of the results of each application.
  */
 - (NSSet *)map:(id(^)(id))block;
 {
-    if(block == nil)
-    {
-        return [[[NSSet alloc] initWithObjects:[NSNull null], nil] autorelease];
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     NSMutableSet * result = [[NSMutableSet alloc] initWithCapacity:[self count]];
     
     for(id obj in self)
     {
-        [result addObject:block(obj)];
+        id value = block(obj);
+        
+        [result addObject:value ? value : [NSNull null]];
     }
     
     return [result autorelease];
@@ -34,8 +32,6 @@
  * returning a list including only those elements
  * for which block returned YES.
  *
- * If block is nil, returns the original set.
- *
  * @param block The block to execute for each element
  * in the set.
  *
@@ -44,10 +40,7 @@
  */
 - (NSSet *)filter:(BOOL(^)(id))block
 {
-    if(block == nil)
-    {
-        return [[self copy] autorelease];
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     NSMutableSet * result = [[NSMutableSet alloc] initWithCapacity:[self count]];
 
@@ -66,8 +59,6 @@
  * Executes a block for every element in the set
  * until the block returns YES.
  *
- * If block is nil, returns nil.
- *
  * @param block The block to execute for each element
  * in the set.
  *
@@ -77,10 +68,7 @@
  */
 - (id)selectOne:(BOOL(^)(id))block
 {
-    if(block == nil)
-    {
-        return nil;
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     for(id obj in self)
     {
@@ -98,8 +86,6 @@
  * partitioning the elements into two sets depending
  * on the boolean return value of the block.
  *
- * If block is nil, returns an array with empty subsets.
- *
  * @param block The block to execute for each element in the set.
  *
  * @return An array with two elements: a set containing
@@ -108,10 +94,7 @@
  */
 - (NSArray *)partition:(BOOL(^)(id))block
 {
-    if(block == nil)
-    {
-        return [[NSArray arrayWithObjects:[[NSSet set] autorelease], [[NSSet set] autorelease], nil] autorelease];
-    }
+    CR_NIL_BLOCK_CHECK(block);
     
     NSMutableSet * positiveSet = [[NSMutableSet alloc] initWithCapacity:[self count]];
     NSMutableSet * negativeSet = [[NSMutableSet alloc] initWithCapacity:[self count]];
