@@ -8,5 +8,6 @@
 - (id)selectOne:(BOOL(^)(id))block;
 - (id)reduce:(id(^)(id a, id b))block;
 - (NSArray *)zip:(NSArray *)other with:(id(^)(id a, id b))block;
+- (NSArray *)partition:(BOOL(^)(id))block;
 
 @end

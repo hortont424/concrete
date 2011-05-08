@@ -198,4 +198,42 @@
     return [result autorelease];
 }
 
+/**
+ * Executes a block for every element in the array,
+ * partitioning the elements into two arrays depending
+ * on the boolean return value of the block.
+ *
+ * If block is nil, returns an array with empty subarrays.
+ *
+ * @param block The block to execute for each element in the array.
+ *
+ * @return An array with two elements: an array containing
+ * all elements for which the block returned NO, and all
+ * for which it returned YES, in that order.
+ */
+- (NSArray *)partition:(BOOL(^)(id))block
+{
+    if(block == nil)
+    {
+        return [[NSArray arrayWithObjects:[[NSArray array] autorelease], [[NSArray array] autorelease], nil] autorelease];
+    }
+    
+    NSMutableArray * positiveSet = [[NSMutableArray alloc] initWithCapacity:[self count]];
+    NSMutableArray * negativeSet = [[NSMutableArray alloc] initWithCapacity:[self count]];
+    
+    for(id obj in self)
+    {
+        if(block(obj))
+        {
+            [positiveSet addObject:obj];
+        }
+        else
+        {
+            [negativeSet addObject:obj];
+        }
+    }
+    
+    return [[NSArray arrayWithObjects:[negativeSet autorelease], [positiveSet autorelease], nil] autorelease];
+}
+
 @end
