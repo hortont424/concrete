@@ -14,7 +14,7 @@
 		35007C30136906D8008ACFBE /* ConcreteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C2F136906D8008ACFBE /* ConcreteTests.m */; };
 		35007C3C1369070E008ACFBE /* NSArray+Concrete.h in Headers */ = {isa = PBXBuildFile; fileRef = 35007C3A1369070E008ACFBE /* NSArray+Concrete.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35007C3D1369070E008ACFBE /* NSArray+Concrete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C3B1369070E008ACFBE /* NSArray+Concrete.m */; };
-		35007C4013690F6B008ACFBE /* NSSet+Concrete.h in Headers */ = {isa = PBXBuildFile; fileRef = 35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */; };
+		35007C4013690F6B008ACFBE /* NSSet+Concrete.h in Headers */ = {isa = PBXBuildFile; fileRef = 35007C3E13690F6B008ACFBE /* NSSet+Concrete.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35007C4113690F6B008ACFBE /* NSSet+Concrete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35007C3F13690F6B008ACFBE /* NSSet+Concrete.m */; };
 		352EA06413771B0D000D0001 /* CRBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 352EA06213771B0D000D0001 /* CRBase.h */; };
 /* End PBXBuildFile section */
