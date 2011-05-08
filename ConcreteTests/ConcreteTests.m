@@ -41,6 +41,12 @@
     STAssertEqualObjects(expectedFilterArray, filterArray, nil);
     STAssertEqualObjects(testArray, [testArray filter:nil], nil);
     
+    NSNumber * selectOneResult = [testNumArray selectOne:^(id a)
+                                  {
+                                      return (BOOL)(([a intValue] % 2) == 1); // Why do we have to cast to bool?
+                                  }];
+    STAssertTrue([selectOneResult intValue] % 2 == 1, nil);
+    
     NSNumber * expectedReduceResult = [NSNumber numberWithInt:15];
     NSNumber * reduceResult = [testNumArray reduce:^(id a, id b)
                                {

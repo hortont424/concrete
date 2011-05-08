@@ -62,4 +62,35 @@
     return [result autorelease];
 }
 
+/**
+ * Executes a block for every element in the set
+ * until the block returns YES.
+ *
+ * If block is nil, returns nil.
+ *
+ * @param block The block to execute for each element
+ * in the set.
+ *
+ * @return The first element in the set for which
+ * the block returned YES. If the block never returns YES,
+ * nil is returned.
+ */
+- (id)selectOne:(BOOL(^)(id))block
+{
+    if(block == nil)
+    {
+        return nil;
+    }
+    
+    for(id obj in self)
+    {
+        if(block(obj))
+        {
+            return obj;
+        }
+    }
+    
+    return nil;
+}
+
 @end

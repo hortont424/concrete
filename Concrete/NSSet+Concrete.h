@@ -4,5 +4,6 @@
 
 - (NSSet *)map:(id(^)(id a))block;
 - (NSSet *)filter:(BOOL(^)(id a))block;
+- (id)selectOne:(BOOL(^)(id))block;
 
 @end
