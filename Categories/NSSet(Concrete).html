@@ -40,6 +40,10 @@
 	
 	<option value="//api/name/map:">&nbsp;&nbsp;&nbsp;&nbsp;- map:</option>
 	
+	<option value="//api/name/partition:">&nbsp;&nbsp;&nbsp;&nbsp;- partition:</option>
+	
+	<option value="//api/name/selectOne:">&nbsp;&nbsp;&nbsp;&nbsp;- selectOne:</option>
+	
 	
 	
 </select>
@@ -69,6 +73,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filter:">filter:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/map:">map:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/partition:">partition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectOne:">selectOne:</a></span></li>
 	
 </ul></li>
 
@@ -126,6 +134,23 @@ returning a list of the results.</p></span>
 		<span class="tooltip"><p>Executes a block for every element in the set,
 returning a list including only those elements
 for which block returned YES.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectOne:">&ndash;&nbsp;selectOne:</a></code>
+		<span class="tooltip"><p>Executes a block for every element in the set
+until the block returns YES.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/partition:">&ndash;&nbsp;partition:</a></code>
+		<span class="tooltip"><p>Executes a block for every element in the set,
+partitioning the elements into two sets depending
+on the boolean return value of the block.</p></span>
 	</span>
 	
 	
@@ -188,8 +213,6 @@ the block returned YES.</p>
 		<p>Executes a block for every element in the set,
 returning a list including only those elements
 for which block returned YES.</p>
-
-<p>If block is nil, returns the original set.</p>
 	</div>
 	
 	
@@ -244,8 +267,121 @@ returning a list of the results.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Executes a block for every element in the set,
 returning a list of the results.</p>
-
-<p>If block is nil, returns a set of NSNull.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSSet+Concrete.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/partition:" title="partition:"></a>
+	<h3 class="subsubtitle method-title">partition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Executes a block for every element in the set,
+partitioning the elements into two sets depending
+on the boolean return value of the block.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)partition:(BOOL ( ^ ) ( id ))<em>block</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to execute for each element in the set.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array with two elements: a set containing
+all elements for which the block returned NO, and all
+for which it returned YES, in that order.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Executes a block for every element in the set,
+partitioning the elements into two sets depending
+on the boolean return value of the block.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSSet+Concrete.m</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectOne:" title="selectOne:"></a>
+	<h3 class="subsubtitle method-title">selectOne:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Executes a block for every element in the set
+until the block returns YES.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)selectOne:(BOOL ( ^ ) ( id ))<em>block</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to execute for each element
+in the set.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The first element in the set for which
+the block returned YES. If the block never returns YES,
+nil is returned.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Executes a block for every element in the set
+until the block returns YES.</p>
 	</div>
 	
 	
@@ -275,7 +411,7 @@ returning a list of the results.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Tim Horton. All rights reserved. (Last updated: 2011-04-28)</span><br />
+						<p><span class="copyright">&copy; 2011 Tim Horton. All rights reserved. (Last updated: 2011-05-13)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.3 (build 684)</a>.</span></p>
 						
