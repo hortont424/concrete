@@ -12,5 +12,7 @@
 - (id)reduce:(id(^)(id a, id b))block;
 - (NSArray *)zip:(NSArray *)other with:(id(^)(id a, id b))block;
 - (NSArray *)partition:(BOOL(^)(id))block;
+- (NSArray *)takeWhile:(BOOL(^)(id))block;
+- (NSArray *)dropWhile:(BOOL(^)(id))block;
 
 @end

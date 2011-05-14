@@ -77,6 +77,20 @@
                               }];
     STAssertEqualObjects(expectedPartitionArrayNO, [partitionArray objectAtIndex:0], nil);
     STAssertEqualObjects(expectedPartitionArrayYES, [partitionArray objectAtIndex:1], nil);
+    
+    NSArray * expectedTakeWhileArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], nil];
+    NSArray * takeWhileArray = [testNumArray takeWhile:^(id a)
+                                 {
+                                     return (BOOL)([a intValue] < 3);
+                                 }];
+    STAssertEqualObjects(expectedTakeWhileArray, takeWhileArray, nil);
+    
+    NSArray * expectedDropWhileArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:4], [NSNumber numberWithInt:5], nil];
+    NSArray * dropWhileArray = [testNumArray dropWhile:^(id a)
+                                {
+                                    return (BOOL)([a intValue] < 4);
+                                }];
+    STAssertEqualObjects(expectedDropWhileArray, dropWhileArray, nil);
 }
 
 @end

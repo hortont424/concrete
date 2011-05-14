@@ -245,4 +245,57 @@
     return [[NSArray arrayWithObjects:[negativeSet autorelease], [positiveSet autorelease], nil] autorelease];
 }
 
+/**
+ * Construct a new array containing all of the members of the
+ * original up until the element where the block evaluates to
+ * NO, leaving us with the prefix for which the block is YES.
+ *
+ * @param block The block to execute for each element in the array.
+ *
+ * @return An array containing the prefix for which block is YES.
+ */
+- (NSArray *)takeWhile:(BOOL(^)(id))block
+{
+    NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
+    
+    for(id obj in self)
+    {
+        if(!block(obj))
+        {
+            return result;
+        }
+        
+        [result addObject:obj];
+    }
+    
+    return result;
+}
+
+/**
+ * Construct a new array containing all of the members of the
+ * original starting from the first element where the block
+ * evaluates to NO.
+ *
+ * @param block The block to execute for each element in the array.
+ *
+ * @return An array containing the complement of takeWhile:.
+ */
+- (NSArray *)dropWhile:(BOOL(^)(id))block
+{
+    NSMutableArray * result = [[NSMutableArray alloc] initWithCapacity:[self count]];
+    BOOL finishedDropping = NO;
+    
+    for(id obj in self)
+    {
+        finishedDropping |= !block(obj);
+        
+        if(finishedDropping)
+        {
+            [result addObject:obj];
+        }
+    }
+    
+    return result;
+}
+
 @end
