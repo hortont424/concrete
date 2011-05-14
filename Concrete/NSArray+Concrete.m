@@ -4,6 +4,49 @@
 @implementation NSArray (Concrete)
 
 /**
+ * Determine if a block returns true for any of the elements
+ * in the array.
+ *
+ * @param block The block to execute for each element in the array.
+ *
+ * @return YES if the block returns true for one or more elements,
+ * NO otherwise
+ */
+- (BOOL)any:(BOOL(^)(id a))block
+{
+    for(id obj in self)
+    {
+        if(block(obj))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+/**
+ * Determine if a block returns true for all of the elements
+ * in the array.
+ *
+ * @param block The block to execute for each element in the array.
+ *
+ * @return YES if the block returns true for all elements, NO otherwise
+ */
+- (BOOL)all:(BOOL(^)(id a))block
+{
+    for(id obj in self)
+    {
+        if(!block(obj))
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+/**
  * Executes a block for every element in the array,
  * returning a list of the results.
  *

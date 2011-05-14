@@ -2,6 +2,9 @@
 
 @interface NSArray (Concrete)
 
+- (BOOL)any:(BOOL(^)(id a))block;
+- (BOOL)all:(BOOL(^)(id a))block;
+
 - (NSArray *)map:(id(^)(id a))block;
 - (NSArray *)mapIndexed:(id(^)(NSUInteger, id))block;
 - (NSArray *)filter:(BOOL(^)(id a))block;

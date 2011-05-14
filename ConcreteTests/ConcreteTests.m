@@ -12,6 +12,12 @@
                                                        [NSNumber numberWithInt:4],
                                                        [NSNumber numberWithInt:5], nil];
     
+    STAssertEquals([testNumArray all:^(id a){return (BOOL)([a intValue] < 10);}], YES, nil);
+    STAssertEquals([testNumArray all:^(id a){return (BOOL)([a intValue] > 3);}], NO, nil);
+    
+    STAssertEquals([testNumArray any:^(id a){return (BOOL)([a intValue] > 10);}], NO, nil);
+    STAssertEquals([testNumArray any:^(id a){return (BOOL)([a intValue] > 3);}], YES, nil);
+    
     NSArray * expectedMapArray = [NSArray arrayWithObjects:@"one more", @"two more", @"three more", @"four more", nil];
     NSArray * mapArray = [testArray map:^(id a)
                           {

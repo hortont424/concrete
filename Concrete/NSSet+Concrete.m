@@ -4,6 +4,49 @@
 @implementation NSSet (Concrete)
 
 /**
+ * Determine if a block returns true for any of the elements
+ * in the set.
+ *
+ * @param block The block to execute for each element in the set.
+ *
+ * @return YES if the block returns true for one or more elements,
+ * NO otherwise
+ */
+- (BOOL)any:(BOOL(^)(id a))block
+{
+    for(id obj in self)
+    {
+        if(block(obj))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+/**
+ * Determine if a block returns true for all of the elements
+ * in the set.
+ *
+ * @param block The block to execute for each element in the set.
+ *
+ * @return YES if the block returns true for all elements, NO otherwise
+ */
+- (BOOL)all:(BOOL(^)(id a))block
+{
+    for(id obj in self)
+    {
+        if(!block(obj))
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+/**
  * Executes a block for every element in the set,
  * returning a list of the results.
  *
