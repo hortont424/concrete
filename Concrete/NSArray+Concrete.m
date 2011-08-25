@@ -268,7 +268,7 @@
         }
     }
     
-    return [[NSArray arrayWithObjects:[negativeSet autorelease], [positiveSet autorelease], nil] autorelease];
+    return [NSArray arrayWithObjects:[negativeSet autorelease], [positiveSet autorelease], nil];
 }
 
 /**
